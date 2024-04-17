@@ -34,7 +34,9 @@ function Header({onSearch}) {
     history('create ')
   }
 
-
+  const handleLogin = () => {
+    history('/login')
+  }
 
   return (
     <div className="headerParentDiv">
@@ -66,7 +68,8 @@ function Header({onSearch}) {
           <Arrow></Arrow>
         </div>
          
-        <div className="loginPage">
+        
+        <div onClick={handleLogin} className="loginPage">
           <span>{user ? user.displayName : "Login"}</span>
           <hr />
         </div>
